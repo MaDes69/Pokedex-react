@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "NT Wagner(only personal use)";
+  src: url("/font/NT Wagner.otf") format("opentype");
+}
+
+html,
+*,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #0d0f31;
+  font-family: "NT Wagner(only personal use)";
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  height: 100vh;
+}

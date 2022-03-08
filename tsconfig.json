@@ -1,0 +1,31 @@
+//fichier config typescript
+
+{
+    "compilerOptions": {
+        //code compilé en Javascript es5
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      //compile jsx en javascript (.tsx=typesctipt +js)
+      "jsx": "react",
+      "noFallthroughCasesInSwitch": true
+    },
+    //fichier situé dans la  src
+    "include": [
+      "src"
+    ]
+  }
