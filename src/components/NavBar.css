@@ -1,0 +1,136 @@
+:root {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  --color-text-menu: white;
+  --color-text-frame: #817f7f;
+  --color-bg-menu: rgba(164, 80, 129, 0.5);
+  --border-radius: 2rem;
+  --menu-padding: 1rem;
+  color: var(--color-text);
+}
+
+.unbutton {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  color: white;
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  grid-template-areas: "top" "content";
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.brand-logo {
+  font-family: "Monologue DEMO";
+}
+.menu a {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.menu__top {
+  pointer-events: auto;
+  z-index: 100;
+  padding: 0 var(--menu-padding);
+  grid-area: top;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "title nav search";
+  justify-content: space-between;
+  background: var(--color-bg-menu);
+  border-radius: var(--border-radius);
+}
+
+.menu__content {
+  overflow: hidden;
+  transform: translateY(-100%);
+  padding: 0 var(--menu-padding);
+  height: 100%;
+  display: grid;
+  justify-content: space-between;
+  background: var(--color-bg-menu);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "links links back"
+    "tagline tagline tagline";
+  padding-bottom: 1rem;
+  will-change: transform;
+}
+
+.menu__title {
+  grid-area: title;
+  font-weight: 300;
+  margin: 0;
+  align-self: center;
+  justify-self: start;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  position: relative;
+  line-height: 0.5;
+  margin-top: 0.15rem;
+}
+
+.menu__left {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu a {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+nav {
+  color: #fff;
+  background-color: rgb(248, 123, 202);
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+.menu__nav-top {
+  /* grid-area: nav; */
+  overflow: hidden;
+  /* height: 1.75rem; */
+  justify-self: center;
+}
+
+.menu__nav-top a {
+  margin: 0 1rem;
+}
+
+.menu__nav-content {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+  margin-top: 5.5vh;
+}
+
+.menu__side {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+  position: relative;
+}

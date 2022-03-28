@@ -1,4 +1,4 @@
-import react from 'react';
+// import react from 'react';
 
   //hook personnalisé en fonction du type du pokemon 
   const formatType = (type: string): string => {

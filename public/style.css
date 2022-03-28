@@ -3,14 +3,22 @@
   src: url("/font/NT Wagner.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Monologue DEMO";
+  src: url("/font/Monologue DEMO.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NordinSlab";
+  src: url("/font/NordineSlab.otf") format("opentype");
+}
 html,
 *,
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #0d0f31;
-  font-family: "NT Wagner(only personal use)";
+  font-family: "Monologue DEMO";
   color: white;
 }
 
@@ -18,13 +26,4 @@ h1 {
   font-size: 50px;
   text-align: center;
   color: white;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  overflow: hidden;
-  height: 100vh;
 }

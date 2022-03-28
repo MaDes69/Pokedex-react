@@ -16,6 +16,18 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import POKEMONS from './models/mock-pokemon';
 import Pokemon from './models/pokemon';
 import PokemonList from './pages/pokemon-list';
+import {BrowserRouter as Router, Switch, Route} from  "react-router-dom";
+import PokemonsDetail from './pages/pokemon-detail';
+import PageNotFound from './pages/page-not-found';
+import PokemonEdit from './pages/page-edit';
+import PokemonAdd from './pages/pokemon-add';
+import NavBar from "./components/NavBar";
+import Login from './pages/login'
+import Home from './pages/home'
+import Footer from './components/footer'
+import './app.css';
+import PrivateRoute from './PrivateRoute'
+// import styled from 'styled-components';
   
 //FC = Function Component, React.FC = FunctionComponent
 const App: FunctionComponent = () => {
@@ -65,7 +77,30 @@ const App: FunctionComponent = () => {
         //      )};
 
  return (
-     <PokemonList />
+
+ <Router>
+    <NavBar />
+
+     {/* Route */}
+     <Switch>
+         
+       
+         {/* <Route exact path='/login' component={Login} /> */}
+
+           {/* mettre PrivateRoute pour rendre les route accessible apres login */}
+         <Route exact path='/' component={Home} />
+         <Route exact path='/pokemons' component={PokemonList} />
+         <Route exact path='/pokemons/add' component={PokemonAdd} />
+         <Route  exact path='/pokemons/edit/:id' component= {PokemonEdit} />
+         <Route  path='/pokemons/:id' component={PokemonsDetail} />
+         
+         <Route component={PageNotFound} />
+         
+     </Switch>
+     <Footer />
+ </Router>
+ 
+     
 //   <div>
 //       <h1 className="center">POKEDEX</h1>
 //       {/* <p onClick={showPokemonsCount}>Afficher le nombre de pokemons</p> */}
